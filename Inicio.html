@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./JS/formulario.js"></script> 
+    <title>Organizacion Etherea</title>
+
+    <!-- Links para Opens Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet">
+
+    <!-- prefetch 
+    <link rel="prefetch" href="file://Inicio.html" as="document">-->
+
+    <!-- Referencia a archivos CSS -->
+    <!--<link rel="preload" href="CSS/normalize.css" />-->
+    <link rel="stylesheet" href="CSS/normalize.css">
+
+    <!--<link rel="preload" href="CSS/style.css" >-->
+    <link rel="stylesheet" href="CSS/style.css"> 
+    <style>
+      /* Estilo para un input con borde de 2px de ancho */
+      input#nombres {
+          border-width: 2px;
+      }
+      input#apellidos {
+          border-width: 2px;
+      }
+      input#Correo {
+          border-width: 2px;
+      }
+      input#redes_usuario {
+          border-width: 2px;
+      }
+      /* Estilo para un textarea con borde de 2px de ancho */
+      textarea {
+          border-width: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__barra">
+        <!-- Barra de navegación -->
+        <nav class="navegacion__header">
+            <div class="navegacion__imagen">
+                <a href="Inicio.html" class="logo__imagen">
+                  <img
+                    src="img/Logo_proy2.png"
+                    class="logo"
+                    alt="logo"
+                  />
+                </a>
+            </div>
+          <div class="navegacion__usuario">
+            <a href="Inicio.html" class="navegacion_enlace">Inicio</a>
+            <a href="nosotros.html" class="navegacion__enlace" target="_blank">Nosotros</a>
+            <!--<a href="#" class="navegacion__enlace">Contacto</a>-->
+            <button class="navegacion__enlace" id="desplegarBtn">Contacto</button>
+            <div id="lista" class="oculto">
+              <a href="#">Email</a>
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+            </div>
+          </div>
+        </nav>
+        
+        <!-- Mostrar texto de header-->
+        <div class="header__texto">
+          <!--<h1 class="no-margin">ALUMNI</h1>-->
+          <img src="img/Logo_proy2.png" class="logo ini" alt="logo ini">
+          <!--<p class="no-margin">Conoce los diferentes apoyos que tenemos para ti</p>-->
+          <br>
+        </div>
+      </div>
+    </header>
+
+    <div class="contenedor">
+      <main class="blog">
+        <!-- Aqui va el contenido principal -->
+        <form action="./conexion.php" id="formula" method="post">
+          <div>
+              <div class="cuadro">
+                  <br>
+                  <div class="cabecera">
+                      <h4 class="tit">FORMULARIO DE SOLICITUD DE </h4>
+                      <h4 class="tit">APOYO ECONOMICO</h4>
+                  </div>
+                  <div class="seccion_texto">
+                      <p>Llene el siguiente formulario para realizar su solicitud:</p>
+                  </div>
+                  <section class="formulario" id="formulario" action="/">
+                      <h4>DATOS</h4>
+                        <!--Nombre-->
+                        <div class= "grupo_formula" id="grupo_nombre">
+                          <input class="control" type="text" name="nombre" id="nombres" placeholder="Nombre(s)" required><br>
+                          <div class="error"></div>
+                        </div>
+                        <br>
+                        <div class="grupo_formula" id="grupo_apellidos">
+                          <input class="control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required><br>
+                          <div class="error"></div>
+                        </div>
+                        <br>
+                        <div  class="grupo_formula" id="grupo_correo">
+                          <input class="control" type="text" name="Correo" id="Correo" placeholder="Correo Electronico  Ej. nadie@gmail.com" required><br>
+                          <div class="error"></div>
+                        </div>
+                        <br>
+                        <div class="grupo_formula" id="grupo_redes">
+                          <input class="control" type="text" name="redes_usuario" id="redes_usuario" placeholder="Link de acceso al video" required><br>
+                          <div class="error"></div>
+                        </div>
+                        <br>  
+                        <div class="grupo_formula" id="grupo_text">
+                          <textarea class="description" type="text" name="description" id="descripcion" placeholder="Razones para solicitar el apoyo: No mas de 100 palabras" rows="5" cols="10" style="border-color: #f5f5f5; border-radius: 1rem;" required></textarea><br>
+                          <div class="error"></div>
+                        </div>  
+                      <div class="botones">
+                          <button type="submit" class="buton1" id="boton_1"> ENVIAR </button> 
+                      </div>
+                  </section>
+              </div> 
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <!-- Creamos nuestro footer -->
+    <footer class="footer no-margin no-padding">
+      <div class="barra__footer">
+        <!-- Despliega un texto -->
+        <p class="frase__footer">
+          "El apoyo que necesitas nosotros te lo damos, no pierdas la oportunidad".
+        </p>
+
+        <!-- Crea nuestra barra de navegación-->
+        <nav class="navegacion__footer">
+          <a href="terminos.html" class="navegacion__enlace">Términos de Uso</a>
+          <a href="politica.html" class="navegacion__enlace">Política de privacidad</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

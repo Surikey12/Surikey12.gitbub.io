@@ -1,0 +1,114 @@
+/* Definimos variables que se pueden usar */
+:root {
+    --fuenteHeading: "PT Sans", sans-serif;
+    --fuentePrimaria: "Open Sans", sans-serif;
+    --gris: #b7c4cf;
+    --crema: #eee3cb;
+    --azulclaro: #384358;
+    --azulMarino: #242f49;
+    --azul : #7ececa;
+    --blanco: #fff;
+    --negro: #000;
+  }
+  
+  /* Establecemos 1 rem = 1 px */
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* Definimos variables para toda la hoja */
+  body {
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: var(--fuentePrimaria);
+    font-size: 1.8rem;
+    line-height: 2;
+    background-image: url(../img/fondo3.png); /* Establecemos como fondo una imagen pero saliendo de la carpeta CSS */
+    background-size: cover; /* La imagen debe cubrir toda la barra */
+    background-repeat: no-repeat; /* La imagen no se debe de repetir */
+    background-position: center center; /* Centramos la imagen */
+  }
+  
+  /* Globales */
+  a {
+    text-decoration: none; /* Retiramos la linea baja de un hiperviculo */
+    color: #fff; /* Contrastar con la barra de navegacion */
+    font-weight: 600;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(
+      --fuenteHeading
+    ); /* Hacemos que nuestros titulos tengan la misma fuente */
+    line-height: 1.2; /* Y el mismo interlineado */
+  }
+  
+  h1 {
+    font-size: 4.8rem; /* El h1 es más grande */
+  }
+  
+  h2 {
+    font-size: 4rem; /* Reducimos tamaños */
+  }
+  
+  h3 {
+    font-size: 3.2rem; /* ... */
+  }
+  
+  h4 {
+    font-size: 2.8rem; /* ... */
+  }
+  
+  .contenedor {
+    width: min(90%, 120rem);
+    margin: 5rem auto;
+  }
+
+  .interno{
+    width: 800px;
+    height: 400px;
+    box-sizing: border-box;
+    border-radius: 8px; /*que tan redondeado sera el borde*/
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.8); /*La densidad del sombreado*/
+    margin: 20px;
+    margin-left: 200px;
+    margin-top: 12rem;
+    text-align: center;
+    background-color: var(--blanco);
+  }
+
+  .titulo{
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+  }
+  p{
+    margin: 4rem;
+    margin-top: 5rem;
+    font-family: 'Libre Baskerville', serif;
+  }
+
+  .listo .acept{
+    width: 20%;
+    border: none;
+    margin-top: 1rem;
+    height: 50px;
+    color: var(--blanco);
+    background: var(--azulMarino);
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .acept:hover{
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); 
+    transform: scale(0.9);
+  }

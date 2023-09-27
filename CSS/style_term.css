@@ -1,0 +1,256 @@
+/* Definimos variables que se pueden usar */
+:root {
+    --fuenteHeading: "PT Sans", sans-serif;
+    --fuentePrimaria: "Open Sans", sans-serif;
+    --gris: #b7c4cf;
+    --crema: #eee3cb;
+    --azulclaro: #384358;
+    --azulMarino: #242f49;
+    --azul : #7ececa;
+    --blanco: #fff;
+    --negro: #000;
+  }
+  
+  /* Establecemos 1 rem = 1 px */
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* Definimos variables para toda la hoja */
+  body {
+    overflow-x: hidden;
+    font-family: var(--fuentePrimaria);
+    font-size: 1.8rem;
+    line-height: 2;
+    background-image: url(../img/fondo3.png); /* Establecemos como fondo una imagen pero saliendo de la carpeta CSS */
+    background-size: cover; /* La imagen debe cubrir toda la barra */
+    background-repeat: no-repeat; /* La imagen no se debe de repetir */
+    background-position: center center; /* Centramos la imagen */
+  }
+  
+  /* Globales */
+  a {
+    text-decoration: none; /* Retiramos la linea baja de un hiperviculo */
+    color: #fff; /* Contrastar con la barra de navegacion */
+    font-weight: 600;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(
+      --fuenteHeading
+    ); /* Hacemos que nuestros titulos tengan la misma fuente */
+    line-height: 1.2; /* Y el mismo interlineado */
+  }
+  
+  h1 {
+    font-size: 4.8rem; /* El h1 es más grande */
+  }
+  
+  h2 {
+    font-size: 4rem; /* Reducimos tamaños */
+  }
+  
+  h3 {
+    font-size: 3.2rem; /* ... */
+  }
+  
+  h4 {
+    font-size: 2.8rem; /* ... */
+  }
+  
+  .contenedor {
+    width: min(90%, 120rem);
+    margin: 5rem auto;
+  }
+  
+  /* Definimos estilo para el boton */
+  .botones {
+    background-color: var(--negro); /* El fondo es de color blanco */
+    font-family: var(--fuenteHeading); /* Cambiamos la fuente de los botones */
+    text-align: center; /* Alineamos los textos del centro */
+    border-radius: 0.2rem; /* Redondeamos la caja donde esta contenida */
+    margin: 1.2rem; /* Damos un margen exterior */
+    padding: 0.8rem; /* Expandimos la caja desde el interior */
+    font-size: 1.5rem;
+    text-transform: uppercase; /* Transformamos las letras a mayusculas */
+    border: none; /* Retiramos el borde del boton */
+  }
+  
+  /* Cuando el usuario tenga encima el cursor se realiza:  */
+  .boton:hover {
+    cursor: pointer; /* Cambiamos el cursos a puntero o mano */
+    background-color: var(--azul); /* Cambiamos el fondo de los botones */
+  }
+  
+  /* Utilidades */
+  /* Definimos variables de utilidad */
+  .no-margin {
+    margin: 0;
+  }
+  
+  .no-padding {
+    padding: 0;
+  }
+  
+  /* Barra */
+  .header {
+    height: 30rem; /* Le damos más espacio al header */
+  }
+  
+  
+  .barra__detalles {
+    display: grid; /* Utilizamos grid para distribuir correctamente */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Dividimos el grid en 2 columnas iguales */
+    row-gap: 1rem; /* Le damos un rem de espacio a la fila */
+  }
+  
+  .logo__imagen .logo {
+    height: 6rem;
+    margin-top: 1rem;
+    margin-left: 5rem; /* Le damos un margen mayor al logo */
+  }
+  
+  .navegacion__imagen {
+    grid-row: 1/3; /* Colocamos la imagen en 3 filas */
+  }
+  
+  .navegacion__header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*margin-top: 1rem;*/
+    /*margin-bottom: 1rem;*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: var(--azulMarino);
+  }
+  .navegacion__usuario {
+    text-align: right;
+    /*margin-right: 2rem;*/
+    margin-top: 2rem;
+  }
+  .oculto{
+    display: none;
+    position: relative;
+  }
+  #desplegarBtn{
+    padding: 10px 15px;        /* Espaciado interno */
+    font-size: 2rem;           /* Tamaño del texto */
+    font-family: var(--fuenteHeading); /* Cambiamos la fuente de los botones */
+    color: #ffffff;            /* Color del texto */
+    background-color: #242f49; /* Color de fondo */
+    border: none;              /* Eliminar borde predeterminado */
+    border-radius: 5px;        /* Bordes redondeados */
+    cursor: pointer;           /* Cambiar cursor a mano al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color de fondo */
+    list-style-type: none;
+  }
+  #lista{
+    display: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: var(--azulclaro);
+    font-family: var(--fuenteHeading); /* Cambiamos la fuente de los botones */
+    color: #ffffff;            /* Color del texto */
+    font-size: 1.5rem;
+  }
+  
+  .navegacion__header a {
+    padding: 1rem;
+  }
+  .navegacion__usuario a:hover {
+    background-color: var(--azul);
+    padding: 2.5rem;
+  }
+  
+  .oculto a:hover{
+    padding: 1rem;
+  }
+  
+  .header__texto {
+    text-align: center;
+    padding: 4rem;
+    color: var(--blanco);
+  }
+  .cabecera{
+    color: var(--negro);
+  }
+
+  .seccion_texto{
+    color: var(--negro);
+  }
+
+  /* Cuerpo de la pagina*/
+  .contenedor { /*En este contenedor ponemos todos las caracteristicas que tendra el contenido*/
+    width: min(90%, 120rem);
+    margin: 5rem auto;
+  }
+
+  .texto{
+    width: 1100px;
+    height: 1400px;
+    box-sizing: border-box;
+    border-radius: 8px; /*que tan redondeado sera el borde*/
+    box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.8); /*La densidad del sombreado*/
+    margin: 5px;
+    margin-left: 60px;
+    text-align: justify;
+    line-height: 20px; 
+    /*opacity: 0.7;*/
+    background-color: var(--blanco);
+  }
+  .texto .cabecera .titulo{
+    text-align: center;
+  }
+  .formula{
+    margin: 80px;
+    text-align: justify;
+    color: var(--negro); 
+  }
+
+  /* Footer */
+  
+  .footer {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--azulclaro);
+  }
+  
+  .frase__footer {
+    padding: 2rem;
+    margin: 1rem;
+    text-align: center;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+  }
+  
+  .navegacion__footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--azulMarino);
+    padding: 1rem;
+  }
+  
+  .navegacion__footer .navegacion__enlace {
+    padding: 1.2rem;
+  }
+  
+  .navegacion__footer .navegacion__enlace:hover {
+    background-color: var(--azul);
+  }
+  
+  /* Todo el codigo para el molde */
+  
